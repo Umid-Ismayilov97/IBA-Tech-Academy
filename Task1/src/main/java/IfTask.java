@@ -9,4 +9,6 @@ public class IfTask {
             System.out.println("You can go to the cinema ");}
             else System.out.println("You can go to the night club");
     }
-}
+
+    }
+
