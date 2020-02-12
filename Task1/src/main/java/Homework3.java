@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class Homework3 {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        System.out.println("Please, input the day of the week: ");
-        String day = sc.nextLine();
+        String day;
         String[][] schedule = new String[7][2];
         schedule[0][0] = "Sunday";
         schedule[0][1] = "Do home work";
@@ -22,31 +21,27 @@ public class Homework3 {
         schedule[6][0] = "Saturday";
         schedule[6][1] = "Go to the grandparents' home";
         while(true) {
-            if ("Sunday".equals(day) || "sunday".equals(day) || "SUNDAY".equals(day)) {
+            System.out.println("Please, input the day of the week: ");
+            day = sc.nextLine();
+            if (day.equalsIgnoreCase("Sunday")) {
                 System.out.println("Your task is:" + schedule[0][1]);
-                break;
-            } else if ("Monday".equals(day) || "monday".equals(day) || "MONDAY".equals(day)) {
+            } else if (day.equalsIgnoreCase("Monday")) {
                 System.out.println("Your task is:" + schedule[1][1]);
-                break;
-            } else if ("Tuesday".equals(day) || "tuesday".equals(day) || "TUESDAY".equals(day)) {
+            } else if (day.equalsIgnoreCase("Tuesday")) {
                 System.out.println("Your task is:" + schedule[2][1]);
-                break;
-            } else if ("Wednesday".equals(day) || "wednesday".equals(day) || "WEDNESDAY".equals(day)) {
+            } else if (day.equalsIgnoreCase("Wednesday")) {
                 System.out.println("Your task is:" + schedule[3][1]);
-                break;
-            } else if ("Thursday".equals(day) || "thursday".equals(day) || "THURSDAY".equals(day)) {
+            } else if (day.equalsIgnoreCase("Thursday")) {
                 System.out.println("Your task is:" + schedule[4][1]);
-                break;
-            } else if ("Friday".equals(day) || "friday".equals(day) || "FRIDAY".equals(day)) {
+            } else if (day.equalsIgnoreCase("Friday")) {
                 System.out.println("Your task is:" + schedule[5][1]);
-                break;
-            } else if ("Saturday".equals(day) || "saturday".equals(day) || "SATURDAY".equals(day)) {
+            } else if (day.equalsIgnoreCase("Saturday")) {
                 System.out.println("Your task is:" + schedule[6][1]);
-                break;
-            } else if ("Exit".equals(day) || "exit".equals(day) || "EXIT".equals(day))
+            } else if (day.equalsIgnoreCase("Exit"))
                 break;
                 else {
                 System.out.println("Sorry, I don't understand you, please try again.");
+
             }
         }
         }
