@@ -9,9 +9,9 @@ public class main {
         System.out.println(dog.toString());
         Human mother = new Human("Jane" ,"Karleone");
         Human father = new Human("Vita" ,"Karleone");;
-        Pet p = new Pet ("dog", "");
+        Pet p = new Pet ("dog", "Rick");
 
-        Human dad=new Human("Michael","Karleone",1977,90,new Pet ("dog", ""),
+        Human dad=new Human("Michael","Karleone",1977,90,new Pet ("dog", "Rick"),
                 new Human("Jane" ,"Karleone"),new Human("Vita" ,"Karleone"),
                 new String[]{"eat","drink","sleep"});
         System.out.println(dad.toString());
