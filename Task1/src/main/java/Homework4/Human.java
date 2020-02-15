@@ -7,12 +7,12 @@ public class Human {
     public String surname;
     public int birthday;
     public int iqLevel;
-    public String pet;
-    public String mother;
-    public String father;
+    public Pet pet;
+    public Human mother;
+    public Human father;
     public String[] habit;
 
-    public Human(String name, String surname, int birthday, int iqLevel, String pet, String mother, String father, String[] habit) {
+    public Human(String name, String surname, int birthday, int iqLevel, Pet pet, Human mother, Human father, String[] habit) {
         this.name = name;
         this.surname = surname;
         this.birthday = birthday;
@@ -21,6 +21,11 @@ public class Human {
         this.mother = mother;
         this.father = father;
         this.habit = habit;
+    }
+
+    public Human(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
     }
 
     public Human(String name, String surname, int birthday) {
@@ -64,27 +69,27 @@ public class Human {
         this.iqLevel = iqLevel;
     }
 
-    public String getPet() {
+    public Pet getPet() {
         return pet;
     }
 
-    public void setPet(String pet) {
+    public void setPet(Pet pet) {
         this.pet = pet;
     }
 
-    public String getMother() {
+    public Human getMother() {
         return mother;
     }
 
-    public void setMother(String mother) {
+    public void setMother(Human mother) {
         this.mother = mother;
     }
 
-    public String getFather() {
+    public Human getFather() {
         return father;
     }
 
-    public void setFather(String father) {
+    public void setFather(Human father) {
         this.father = father;
     }
 
@@ -96,14 +101,6 @@ public class Human {
         this.habit = habit;
     }
 
-    public String[] getHabits() {
-        return habit;
-    }
-
-    public void setHabits(String[] habits) {
-        this.habit = habit;
-    }
-
     @Override
     public String toString() {
         return "Human{" +
@@ -112,8 +109,8 @@ public class Human {
                 ", birthday=" + birthday +
                 ", iqLevel=" + iqLevel +
                 ", pet=" + pet +
-                ", mother='" + mother + '\'' +
-                ", father='" + father + '\'' +
+                ", mother=" + mother +
+                ", father=" + father +
                 ", habit=" + Arrays.toString(habit) +
                 '}';
     }

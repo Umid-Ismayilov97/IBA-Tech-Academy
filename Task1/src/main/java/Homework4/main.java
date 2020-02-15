@@ -7,7 +7,13 @@ public class main {
         dog.respond();
         dog.foul();
         System.out.println(dog.toString());
-        Human dad=new Human("Michael","Karleone",1977,90,"dog","Jane Karleone","Vita Karleone",new String[]{"eat","drink","sleep"});
+        Human mother = new Human("Jane" ,"Karleone");
+        Human father = new Human("Vita" ,"Karleone");;
+        Pet p = new Pet ("dog", "");
+
+        Human dad=new Human("Michael","Karleone",1977,90,new Pet ("dog", ""),
+                new Human("Jane" ,"Karleone"),new Human("Vita" ,"Karleone"),
+                new String[]{"eat","drink","sleep"});
         System.out.println(dad.toString());
         Human mommy=new Human("Isabel","Karleone",1980);
         System.out.println(mommy.toString());
