@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Homework3 {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        String day;
         String[][] schedule = new String[7][2];
         schedule[0][0] = "Sunday";
         schedule[0][1] = "Do home work";
@@ -21,32 +20,40 @@ public class Homework3 {
         schedule[5][1] = "Go to the doctor";
         schedule[6][0] = "Saturday";
         schedule[6][1] = "Go to the grandparents' home";
-        while(true) {
+        String day;
+        boolean days = true;
+        while(days) {
             System.out.println("Please, input the day of the week: ");
             day = sc.nextLine();
-            if (day.equalsIgnoreCase("Sunday")) {
-                System.out.println("Your task is:" + schedule[0][1]);
-            } else if (day.equalsIgnoreCase("Monday")) {
-                System.out.println("Your task is:" + schedule[1][1]);
-            } else if (day.equalsIgnoreCase("Tuesday")) {
-                System.out.println("Your task is:" + schedule[2][1]);
-            } else if (day.equalsIgnoreCase("Wednesday")) {
-                System.out.println("Your task is:" + schedule[3][1]);
-            } else if (day.equalsIgnoreCase("Thursday")) {
-                System.out.println("Your task is:" + schedule[4][1]);
-            } else if (day.equalsIgnoreCase("Friday")) {
-                System.out.println("Your task is:" + schedule[5][1]);
-            } else if (day.equalsIgnoreCase("Saturday")) {
-                System.out.println("Your task is:" + schedule[6][1]);
-            } else if (day.equalsIgnoreCase("Exit"))
-                break;
-                else {
-                System.out.println("Sorry, I don't understand you, please try again.");
+            switch (day.toLowerCase()) {
+                case "sunday":
+                    System.out.println("Your task is:" + schedule[0][1]);
+                    break;
+                case "monday":
+                    System.out.println("Your task is:" + schedule[1][1]);
+                    break;
+                case "tuesday":
+                    System.out.println("Your task is:" + schedule[2][1]);
+                    break;
+                case "wednesday":
+                    System.out.println("Your task is:" + schedule[3][1]);
+                    break;
+                case"Thursday":
+                    System.out.println("Your task is:" + schedule[4][1]);
+                    break;
+                case "friday":
+                    System.out.println("Your task is:" + schedule[5][1]);
+                    break;
+                case "saturday":
+                    System.out.println("Your task is:" + schedule[6][1]);
+                    break;
+                case "exit":
+                    days=false;
+                    break;
+                default:
+                    System.out.println("Sorry, I don't understand you, please try again.");
 
             }
         }
-        }
-
-
-
+    }
     }
