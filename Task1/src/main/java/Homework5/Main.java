@@ -10,12 +10,18 @@ public class Main {
         System.out.printf("Dad: %s\n",father.toString());
         Human child = new Human("Judy","Stolone",2013,(2020-2013),80);
         System.out.printf("Child: %s\n",child.toString());
+        System.out.printf("%s %s 's family %s\n",child.getName(),child.getSurname(),child.getFamily().toString());
+        Family members = new Family();
 
+        System.out.printf("Family to string: %s\n",members.toString());
 
+        System.out.printf("%s %s 's family %s\n",child.getName(),child.getSurname(),child.getFamily().toString());
 
+        System.out.printf("Number of members in family before deleting child %d\n",members.countFamily());
 
+        members.deleteChild(1);
 
-
+        System.out.printf("Number of members in family after deleting child %d\n",members.countFamily());
 
     }
 }

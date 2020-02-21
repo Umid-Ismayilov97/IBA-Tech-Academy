@@ -4,7 +4,6 @@ import Homework4.Human;
 import Homework4.Pet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Family {
@@ -15,13 +14,23 @@ public class Family {
     private ArrayList<Human> children;
 
     private Pet pet;
-    //////////////////////////////////////////
 
+    public Family(Human mother, Human father) {
 
-    public Family(Human mother, Human father, ArrayList<Human> children) {
         this.mother = mother;
+
         this.father = father;
-        this.children = children;
+
+        mother.setFamily(this);
+
+        father.setFamily(this);
+
+        children = new ArrayList<Human>();
+
+    }
+
+    public Family() {
+
     }
 
     public Human getMother() {
@@ -30,20 +39,17 @@ public class Family {
 
     }
 
-
     public void setMother(Human mother) {
 
         this.mother = mother;
 
     }
 
-
     public Human getFather() {
 
         return father;
 
     }
-
 
     public void setFather(Human father) {
 
@@ -66,13 +72,43 @@ public class Family {
         this.pet = pet;
 
     }
-        public void addChild (){
+    public void addChild(Human child){
+
+        children.add(child);
+
+        child.setFamily(this);
 
     }
-    public void deleteChild (){
+    public boolean deleteChild(int index){
 
+        if(index - 1 >= children.size()) return false;
+
+        else{
+
+            children.get(index - 1).setFamily(null);
+
+            children.remove(index - 1);
+
+        }
+        return true;
     }
-    public void countFamily (){
+    public int countFamily(){
+
+        int count = children.size();
+
+        if(father.getFamily().equals(this)){
+
+            count++;
+
+        }
+
+        if(mother.getFamily().equals(this)){
+
+            count++;
+
+        }
+
+        return count;
 
     }
     @Override
@@ -98,14 +134,28 @@ public class Family {
         return Objects.hash(mother, father);
 
     }
-
     @Override
     public String toString() {
-        return "Family{" +
-                "mother=" + mother +
-                ", father=" + father +
-                ", children=" + children +
-                ", pet=" + pet +
-                '}';
+
+        String result = String.format("Family{mother=%s, father=%s",
+
+                mother.toString(), father.toString());
+
+        if(children.size() > 0){
+
+            result += String.format(", children=%s",children.toString());
+
+        }
+
+        if(pet != null){
+
+            result += String.format(", pet=%s",pet.toString());
+
+        }
+
+        result += "}";
+
+        return result;
+
     }
 }

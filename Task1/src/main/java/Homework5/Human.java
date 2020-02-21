@@ -15,7 +15,6 @@ public class Human {
 
     private Family family;
 
-
     private String[][] schedule;
     public Human(String name, String surname, int year, int age, int iq, String[][] schedule) {
 
@@ -40,17 +39,16 @@ public class Human {
         this.age = age;
         this.iq = iq;
     }
+    public Human(String name, String surname) {
 
-    @Override
-    public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", year=" + year +
-                ", age=" + age +
-                ", iq=" + iq +
-                '}';
+        this.name = name;
+
+        this.surname = surname;
+
     }
+
+    public Human(){}
+
 
     public String getName() {
 
@@ -131,32 +129,6 @@ public class Human {
 
     }
 
-    public Human(String name, String surname) {
-
-        this.name = name;
-
-        this.surname = surname;
-
-    }
-
-    public Human(){}
-
-
-
-    @Override
-
-    public boolean equals(Object o) {
-
-        if (this == o) return true;
-
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Human human = (Human) o;
-
-        return year == human.year;
-
-    }
-
     public String getScheduleAsAString(){
 
         StringBuilder sb = new StringBuilder();
@@ -173,14 +145,6 @@ public class Human {
         }
 
         return sb.toString();
-
-    }
-
-    @Override
-
-    public int hashCode() {
-
-        return Objects.hash(year);
 
     }
 
@@ -216,8 +180,37 @@ public class Human {
             }
 
         }
-
         this.schedule = temp;
 
+    }
+    @Override
+
+    public int hashCode() {
+
+        return Objects.hash(year);
+
+    }
+    @Override
+
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Human human = (Human) o;
+
+        return year == human.year;
+
+    }
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", year=" + year +
+                ", age=" + age +
+                ", iq=" + iq +
+                '}';
     }
 }
