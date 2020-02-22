@@ -6,18 +6,26 @@ import java.util.Scanner;
 
 public class Homework2 {
     public static void main(String[] args) {
+        String arr[][] = new String[6][6];
         Scanner sc = new Scanner(System.in);
-        String[][] array = {{"0", "1", "2", "3", "4", "5"}, {"1", "-", "-", "-", "-", "-"},
-                {"2", "-", "-", "-", "-", "-"}, {"3", "-", "-", "-", "-", "-"},
-                {"4", "-", "-", "-", "-", "-"}, {"5", "-", "-", "-", "-", "-"}
-        };
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                System.out.print(array[i][j] + " | ");
+        for (int i = 0; i <= 5; i++) {
+            for (int j = 0; j <= 5; j++) {
+                if (i == 0) {
+                    arr[i][j] = (j + " | ");
+                } else if (j == 0) {
+                    arr[i][j] = (i + " | ");
+                } else {
+                    arr[i][j] = ("- | ");
+                }
             }
 
+        }
+        for (int i = 0; i <= 5; i++) {
+            for (int j = 0; j <= 5; j++) {
+                System.out.print(arr[i][j]);
+            }
             System.out.println();
+
         }
         Random TargetGenerator = new Random();
         int TargetColumn = TargetGenerator.nextInt(5) + 1;
@@ -32,20 +40,20 @@ public class Homework2 {
                 System.out.println("Please enter the number again.");
             } else if (x == TargetRaw && y == TargetColumn) {
                 System.out.println("You have won!");
-                array[x][y] = "x";
-                for (int i = 0; i < array.length; i++) {
-                    for (int j = 0; j < array.length; j++) {
-                        System.out.print(array[i][j] + " | ");
+                arr[x][y] = "X | ";
+                for (int i = 0; i < arr.length; i++) {
+                    for (int j = 0; j < arr.length; j++) {
+                        System.out.print(arr[i][j] );
                     }
 
                     System.out.println();
                 }
                 System.exit(0);
             } else {
-                array[x][y] = "*";
-                for (int i = 0; i < array.length; i++) {
-                    for (int j = 0; j < array.length; j++) {
-                        System.out.print(array[i][j] + " | ");
+                arr[x][y] = "* | ";
+                for (int i = 0; i < arr.length; i++) {
+                    for (int j = 0; j < arr.length; j++) {
+                        System.out.print(arr[i][j] );
                     }
 
                     System.out.println();
