@@ -17,16 +17,11 @@ public class Homework2 {
                 } else {
                     arr[i][j] = ("- | ");
                 }
-            }
-
-        }
-        for (int i = 0; i <= 5; i++) {
-            for (int j = 0; j <= 5; j++) {
                 System.out.print(arr[i][j]);
             }
             System.out.println();
-
         }
+
         Random TargetGenerator = new Random();
         int TargetColumn = TargetGenerator.nextInt(5) + 1;
         int TargetRaw = TargetGenerator.nextInt(5) + 1;
