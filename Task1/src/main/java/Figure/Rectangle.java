@@ -4,6 +4,9 @@ public class Rectangle extends Figure {
     Point p1;
     Point p2;
 
+    public static Rectangle random (){
+        return new Rectangle (Point.random(),Point.random());
+    }
     public Rectangle(Point p1, Point p2) {
         this.p1 = p1;
         this.p2 = p2;

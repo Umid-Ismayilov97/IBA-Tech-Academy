@@ -6,6 +6,9 @@ public class Triangle extends Figure {
         Point p2;
         Point p3;
 
+    public static Triangle random (){
+        return new Triangle (Point.random(),Point.random(),Point.random());
+    }
         public Triangle(Point p1, Point p2, Point p3) {
             this.p1 = p1;
             this.p2 = p2;
