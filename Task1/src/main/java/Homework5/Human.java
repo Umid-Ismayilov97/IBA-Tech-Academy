@@ -1,5 +1,6 @@
 package Homework5;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Human {
@@ -187,7 +188,7 @@ public class Human {
 
     public int hashCode() {
 
-        return Objects.hash(year);
+        return Objects.hash(name,surname);
 
     }
     @Override
@@ -200,17 +201,13 @@ public class Human {
 
         Human human = (Human) o;
 
-        return year == human.year;
+        return name == human.name && surname== human.surname;
 
     }
     @Override
     public String toString() {
-        return "Human{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", year=" + year +
-                ", age=" + age +
-                ", iq=" + iq +
-                '}';
+        return String.format("{name='%s',surname='%s',year=%d,age=%d,iq=%d}",name,surname,year,age,iq);
     }
+
+
 }

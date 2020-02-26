@@ -56,7 +56,7 @@ public class Pet {
 
         Pet pet = (Pet) o;
 
-        return species.equals(pet.species);
+        return nickname.equals(pet.nickname);
 
     }
 
@@ -64,19 +64,10 @@ public class Pet {
 
     public int hashCode() {
 
-        return Objects.hash(species);
+        return Objects.hash(nickname);
 
     }
 
-    @Override
-
-    public String toString() {
-
-        return String.format("%s{nickname='%s', age=%d, trickLevel=%d, habits=%s}",
-
-                species, nickname, age, trickLevel, Arrays.toString(habits));
-
-    }
 
     public String getSpecies() {
 
@@ -137,4 +128,14 @@ public class Pet {
         this.habits = habits;
 
     }
+    @Override
+
+    public String toString() {
+
+        return String.format("%s{nickname='%s', age=%d, trickLevel=%d, habits=%s}",
+
+                species, nickname, age, trickLevel, Arrays.toString(habits));
+
+    }
+
 }

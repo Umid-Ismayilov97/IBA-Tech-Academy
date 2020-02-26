@@ -15,6 +15,11 @@ public class Family {
 
     private Pet pet;
 
+
+    public Family() {
+
+    }
+
     public Family(Human mother, Human father) {
 
         this.mother = mother;
@@ -29,9 +34,6 @@ public class Family {
 
     }
 
-    public Family() {
-
-    }
 
     public Human getMother() {
 
@@ -131,7 +133,7 @@ public class Family {
 
     public int hashCode() {
 
-        return Objects.hash(mother, father);
+        return Objects.hash(mother,father);
 
     }
     @Override
