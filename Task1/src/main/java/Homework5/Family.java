@@ -4,6 +4,7 @@ import Homework4.Human;
 import Homework4.Pet;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Family {
@@ -11,29 +12,22 @@ public class Family {
 
     private Human father;
 
-    private ArrayList<Human> children;
+    private Human[] children;
 
     private Pet pet;
+    int counOfChild=0;
 
 
     public Family() {
 
     }
 
-    public Family(Human mother, Human father) {
-
+    public Family(Human mother, Human father, Human[] children, Pet pet) {
         this.mother = mother;
-
         this.father = father;
-
-        mother.setFamily(this);
-
-        father.setFamily(this);
-
-        children = new ArrayList<Human>();
-
+        this.children = children;
+        this.pet = pet;
     }
-
 
     public Human getMother() {
 
@@ -59,7 +53,11 @@ public class Family {
 
     }
 
-    public void setChildren(ArrayList<Human> children) {
+    public Human[] getChildren() {
+        return children;
+    }
+
+    public void setChildren(Human[] children) {
         this.children = children;
     }
 
@@ -76,43 +74,32 @@ public class Family {
     }
     public void addChild(Human child){
 
-        children.add(child);
 
-        child.setFamily(this);
+        children[counOfChild]=child;
+        counOfChild++;
 
     }
     public boolean deleteChild(int index){
 
-        if(index - 1 >= children.size()) return false;
+        if(index >=0 && index < counOfChild) return false;
 
         else{
 
-            children.get(index - 1).setFamily(null);
-
-            children.remove(index - 1);
+            for (int i = index+1; i <counOfChild ; i++) {
+                children[i-1]=children[i];
+            }
+            counOfChild--;
 
         }
         return true;
     }
     public int countFamily(){
 
-        int count = children.size();
 
-        if(father.getFamily().equals(this)){
-
-            count++;
+return  counOfChild+2;
 
         }
 
-        if(mother.getFamily().equals(this)){
-
-            count++;
-
-        }
-
-        return count;
-
-    }
     @Override
 
     public boolean equals(Object o) {
@@ -136,28 +123,13 @@ public class Family {
         return Objects.hash(mother,father);
 
     }
+
     @Override
     public String toString() {
 
-        String result = String.format("Family{mother=%s, father=%s",
+        return String.format("%s{father='%s', mother=%d, pet=%d, children=%s}",
 
-                mother.toString(), father.toString());
-
-        if(children.size() > 0){
-
-            result += String.format(", children=%s",children.toString());
-
-        }
-
-        if(pet != null){
-
-            result += String.format(", pet=%s",pet.toString());
-
-        }
-
-        result += "}";
-
-        return result;
-
+                father, mother, pet, Arrays.toString(children));
     }
+
 }
