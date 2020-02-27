@@ -2,7 +2,7 @@ package Homework4;
 
 public class main {
     public static void main(String[] args) {
-    Pet dog = new Pet ("Rick",5,75,new String[]{"eat","drink","sleep"},"dog");
+        Pet dog = new Pet ("Rick",5,75,new String[]{"eat","drink","sleep"},"dog");
         dog.eat();
         dog.respond();
         dog.foul();
@@ -22,5 +22,5 @@ public class main {
         Pet Rick=new Pet ("Rick",5,75,new String[]{"eat","drink","sleep"},"dog");
         Rick.greetPet();
         Rick.describePet();
-}
+    }
 }
