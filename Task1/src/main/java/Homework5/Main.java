@@ -28,7 +28,7 @@ public class Main {
         System.out.println("List size: "+HumanList.size());
         System.out.println("Hash set size: "+HumanSet.size());
 
-        /////Equals checking/////
+        //////Equals checking//////
 
         System.out.println("Is child equals child1? " + child.equals(child1));
         System.out.println("Is mother equals father? " + mother.equals(father));
