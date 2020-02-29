@@ -1,32 +1,29 @@
 package Homework5;
 
-import Homework4.Human;
-import Homework4.Pet;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
 public class Family {
     private Human mother;
-
+private int indexOfChild=0;
     private Human father;
 
     private Human[] children;
 
     private Pet pet;
-    int counOfChild=0;
+    int counOfChild;
 
 
     public Family() {
 
     }
 
-    public Family(Human mother, Human father, Human[] children, Pet pet) {
+    public Family(Human mother, Human father, Pet pet,int counOfChild) {
         this.mother = mother;
         this.father = father;
-        this.children = children;
         this.pet = pet;
+        this.counOfChild=counOfChild;
+        this.children=new Human[counOfChild];
     }
 
     public Human getMother() {
@@ -75,8 +72,8 @@ public class Family {
     public void addChild(Human child){
 
 
-        children[counOfChild]=child;
-        counOfChild++;
+        children[indexOfChild++]=child;
+
 
     }
     public boolean deleteChild(int index){
@@ -126,10 +123,11 @@ return  counOfChild+2;
 
     @Override
     public String toString() {
-
-        return String.format("%s{father='%s', mother=%d, pet=%d, children=%s}",
-
-                father, mother, pet, Arrays.toString(children));
+        return "Family{" +
+                "mother=" + mother +
+                ", father=" + father +
+                ", children=" + Arrays.toString(children) +
+                ", pet=" + pet +
+                '}';
     }
-
 }
