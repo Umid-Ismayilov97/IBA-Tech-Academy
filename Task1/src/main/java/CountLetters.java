@@ -1,6 +1,6 @@
 public class CountLetters {
     static final int MAX_CHAR = 256;
-
+       //
     static void getOccuringChar(String str)
     {
         // Create an array of size 256 i.e. ASCII_SIZE
