@@ -3,9 +3,9 @@ package Homework5;
 import java.util.Objects;
 
 public class Human {
-    private String name;
+    public String name;
 
-    private String surname;
+    public String surname;
 
     private int year;
 

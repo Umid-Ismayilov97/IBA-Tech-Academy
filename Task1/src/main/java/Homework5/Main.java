@@ -21,10 +21,17 @@ public class Main {
 
         Family family = new Family(mother, father, pet, 2);
 
+        //////Add children//////
+
         family.addChild(child);
         family.addChild(child1);
-
         System.out.println(family.toString());
+        System.out.println(family.counOfChild);
+
+        //////Delete children//////
+
+        family.deleteChild(2);
+        System.out.println(family.counOfChild);
 
         //////Equals checking//////
 

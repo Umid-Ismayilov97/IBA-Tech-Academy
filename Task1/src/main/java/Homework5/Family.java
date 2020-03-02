@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class Family {
     private Human mother;
-private int indexOfChild=0;
+    private int indexOfChild=0;
     private Human father;
 
     private Human[] children;
@@ -76,18 +76,16 @@ private int indexOfChild=0;
 
 
     }
-    public boolean deleteChild(int index){
-
-        if(index >=0 && index < counOfChild) return false;
-
-        else{
-
-            for (int i = index+1; i <counOfChild ; i++) {
-                children[i-1]=children[i];
-            }
-            counOfChild--;
-
+    public boolean deleteChild(int indexOfChildrenArray) {
+        if(this.children==null || indexOfChildrenArray < 0 || indexOfChildrenArray > this.children.length-1)
+            return false;
+        Human[] children2 = new Human[this.children.length-1];
+        for(int i = 0, k = 0; i < children.length; i++) {
+            if(i == indexOfChildrenArray)
+                continue;
+            children2[k++] = this.children[i];
         }
+        this.children = children2;
         return true;
     }
     public int countFamily(){
