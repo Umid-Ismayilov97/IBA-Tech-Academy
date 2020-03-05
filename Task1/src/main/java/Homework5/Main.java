@@ -26,12 +26,17 @@ public class Main {
         family.addChild(child);
         family.addChild(child1);
         System.out.println(family.toString());
-        System.out.println(family.counOfChild);
 
-        //////Delete children//////
+        //////Before delete child//////
 
-        family.deleteChild(2);
-        System.out.println(family.counOfChild);
+        System.out.println("Count of family before delete:  "+family.countFamily());
+        System.out.println("Count of children before delete:  "+family.countOfChild);
+
+        //////After delete child//////
+
+        family.deleteChild();
+        System.out.println("Count of family after delete:  "+family.countFamily());
+        System.out.println("Count of children after delete:  "+family.countOfChild);
 
         //////Equals checking//////
 
