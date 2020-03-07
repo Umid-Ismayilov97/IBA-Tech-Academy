@@ -76,7 +76,8 @@ public class Family {
     }
     public boolean deleteChild(int indexOfChildrenArray) {
         if(indexOfChildrenArray > children.length-1){
-            System.out.println("////////////////////////////////////////\n"+"You have " + countOfChild + " children.Your index is big!!!"+"\n////////////////////////////////////////");
+            System.out.println("////////////////////////////////////////\n"+"You have " + countOfChild +
+                          " children.Your index is big!!!"+"\n////////////////////////////////////////");
             return false;
         }
         Human [] children2=new Human[children.length - 1];
