@@ -21,22 +21,22 @@ public class Main {
 
         Family family = new Family(mother, father, pet, 2);
 
-        //////Add children//////
+        //////Add children///////
 
         family.addChild(child);
         family.addChild(child1);
         System.out.println(family.toString());
+        System.out.println("Count of child : "+family.countOfChild);
 
-        //////Before delete child//////
+        //////Delete children//////
 
-        System.out.println("Count of family before delete:  "+family.countFamily());
-        System.out.println("Count of children before delete:  "+family.countOfChild);
+        family.deleteChild(0);
 
-        //////After delete child//////
+        //If i input big index for Child array system give notfication.
+        //Give 2 or more for indexOfChildrenArray and show this.
 
-        family.deleteChild();
         System.out.println("Count of family after delete:  "+family.countFamily());
-        System.out.println("Count of children after delete:  "+family.countOfChild);
+        System.out.println("Count of children after delete:  "+family.countChildren());
 
         //////Equals checking//////
 

@@ -74,15 +74,30 @@ public class Family {
         children[indexOfChild++]=child;
 
     }
-    public int deleteChild() {
-        return countOfChild--;
+    public boolean deleteChild(int indexOfChildrenArray) {
+        if(indexOfChildrenArray > children.length-1){
+            System.out.println("////////////////////////////////////////\n"+"You have " + countOfChild + " children.Your index is big!!!"+"\n////////////////////////////////////////");
+            return false;
+        }
+        Human [] children2=new Human[children.length - 1];
+        int count = 0;
+        for (int i = 0; i < children.length; i++) {
+            if(i==indexOfChildrenArray) continue;
+
+            children2[count++] = children[i];
+        }
+        children = children2;
+        return true;
+    }
+    public int countChildren (){
+        return children.length;
     }
     public int countFamily(){
 
 
-return  countOfChild+2;
+        return  children.length+2;
 
-        }
+    }
 
     @Override
 
