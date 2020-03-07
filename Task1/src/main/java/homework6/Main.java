@@ -1,7 +1,5 @@
 package homework6;
 
-
-
 public class Main {
     public static void main(String[] args) {
 
@@ -21,19 +19,21 @@ public class Main {
 
         Pet pet = new Pet("Dog","Rick",3);
 
-        Family family = new Family(mother, father, pet, 2);
+        Family family = new Family(mother, father,2);
+
 
         //////Add children//////
 
         family.addChild(child);
         family.addChild(child1);
         System.out.println(family.toString());
-        System.out.println(family.counOfChild);
+        System.out.println("Count of child : "+family.countOfChild);
 
         //////Delete children//////
 
-        family.deleteChild(2);
-        System.out.println(family.counOfChild);
+        family.deleteChild(1);
+        System.out.println("Count of family after delete:  "+family.countFamily());
+        System.out.println("Count of children after delete:  "+family.countChildren());
 
         //////Equals checking//////
 

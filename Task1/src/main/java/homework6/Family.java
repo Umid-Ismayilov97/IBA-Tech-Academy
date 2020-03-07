@@ -7,11 +7,9 @@ public class Family {
     private Human mother;
     private int indexOfChild=0;
     private Human father;
-
     private Human[] children;
-
     private Pet pet;
-    int counOfChild;
+    int countOfChild;
 
     @Override
 
@@ -27,12 +25,11 @@ public class Family {
 
     }
 
-    public Family(Human mother,Human father, Pet pet, int counOfChild) {
+    public Family(Human mother,Human father,int countOfChild) {
         this.mother = mother;
         this.father = father;
-        this.pet = pet;
-        this.counOfChild=counOfChild;
-        this.children=new Human[counOfChild];
+        this.countOfChild=countOfChild;
+        this.children=new Human[countOfChild];
     }
 
     public Human getMother() {
@@ -80,27 +77,31 @@ public class Family {
     }
     public void addChild(Human child){
 
-
         children[indexOfChild++]=child;
-
 
     }
     public boolean deleteChild(int indexOfChildrenArray) {
-        if(this.children==null || indexOfChildrenArray < 0 || indexOfChildrenArray > this.children.length-1)
+        if(indexOfChildrenArray > children.length-1){
+            System.out.println("Your input does not exist");
             return false;
-        Human[] children2 = new Human[this.children.length-1];
-        for(int i = 0, k = 0; i < children.length; i++) {
-            if(i == indexOfChildrenArray)
-                continue;
-            children2[k++] = this.children[i];
         }
-        this.children = children2;
+        Human [] children2=new Human[children.length - 1];
+        int count = 0;
+        for (int i = 0; i < children.length; i++) {
+            if(i==indexOfChildrenArray) continue;
+
+            children2[count++] = children[i];
+        }
+         children = children2;
         return true;
+    }
+    public int countChildren (){
+        return children.length;
     }
     public int countFamily(){
 
 
-        return  counOfChild+2;
+        return  children.length+2;
 
     }
     @Override
