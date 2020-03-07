@@ -22,7 +22,7 @@ public class Main {
         Family family = new Family(mother, father,2);
 
 
-        //////Add children//////
+        //////Add children///////
 
         family.addChild(child);
         family.addChild(child1);
