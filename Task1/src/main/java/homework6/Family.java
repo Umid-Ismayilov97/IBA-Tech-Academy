@@ -82,7 +82,8 @@ public class Family {
     }
     public boolean deleteChild(int indexOfChildrenArray) {
         if(indexOfChildrenArray > children.length-1){
-            System.out.println("Your input does not exist");
+            System.out.println("////////////////////////////////////////\n"+"You have " + countOfChild +
+                    " children.Your index is big!!!"+"\n////////////////////////////////////////");
             return false;
         }
         Human [] children2=new Human[children.length - 1];
@@ -92,7 +93,7 @@ public class Family {
 
             children2[count++] = children[i];
         }
-         children = children2;
+        children = children2;
         return true;
     }
     public int countChildren (){
