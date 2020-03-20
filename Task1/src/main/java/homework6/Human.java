@@ -21,7 +21,7 @@ public class Human {
 
     protected void finalize() throws Throwable {
 
-        System.out.println("Human object is removed!");
+        System.out.println("/////////////////////////\nHuman object is removed!\n/////////////////////////");
 
         super.finalize();
 

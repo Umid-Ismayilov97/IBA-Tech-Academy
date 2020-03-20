@@ -27,6 +27,10 @@ public class Main {
         family.addChild(child1);
         System.out.println(family.toString());
 
+        //////Garbage Collection///////
+        child2=null;
+        System.gc();
+
         ///////////DayOfWeek all values///////////
 
         for (DayOfWeek day : DayOfWeek.values())
@@ -76,12 +80,6 @@ public class Main {
 
         System.out.println("Count of family after delete:  "+family.countFamily());
         System.out.println("Count of children after delete:  "+family.countChildren());
-
-        //////Equals checking//////
-
-        System.out.println("Is child equals child1? " + child.equals(child1));
-        System.out.println("Is child equals child2? " + child.equals(child2));
-
 
     }
 }
