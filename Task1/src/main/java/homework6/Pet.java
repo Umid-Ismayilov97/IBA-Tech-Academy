@@ -3,7 +3,7 @@ package homework6;
 import java.util.Objects;
 
 public class Pet {
-    private String species;
+    private Species species;
 
     private String nickname;
 
@@ -17,13 +17,13 @@ public class Pet {
 
     protected void finalize() throws Throwable {
 
-        System.out.println("Pet object is removed!");
+        System.out.println("/////////////////////////\nPet object is removed!");
 
         super.finalize();
 
     }
 
-    public Pet(String species, String nickname, int age) {
+    public Pet(Species species, String nickname, int age) {
         this.species = species;
         this.nickname = nickname;
         this.age = age;
@@ -53,13 +53,11 @@ public class Pet {
 
     }
 
-    public Pet(String species, String nickname) {
-
+    public Pet(Species species, String nickname) {
         this.species = species;
-
         this.nickname = nickname;
-
     }
+
     @Override
 
     public boolean equals(Object o) {
@@ -82,16 +80,12 @@ public class Pet {
     }
 
 
-    public String getSpecies() {
-
+    public Species getSpecies() {
         return species;
-
     }
 
-    public void setSpecies(String species) {
-
+    public void setSpecies(Species species) {
         this.species = species;
-
     }
 
     public String getNickname() {

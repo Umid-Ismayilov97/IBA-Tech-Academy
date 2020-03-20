@@ -15,7 +15,7 @@ public class Family {
 
     protected void finalize() throws Throwable {
 
-        System.out.println("Family object is removed!");
+        System.out.println("/////////////////////////\nFamily object is removed!");
 
         super.finalize();
 

@@ -18,8 +18,10 @@ public class Main {
         Human child2 = new Human("Judy","Stolone",2013,(2020-2013),80);
 
         Pet pet = new Pet("Dog","Rick",3);
+        Pet pet1 = new Pet("Dog","Rick",3);
 
         Family family = new Family(mother, father,2);
+        Family family1 = new Family(mother, father,2);
 
         //////Add children///////
 
@@ -29,6 +31,8 @@ public class Main {
 
         //////Garbage Collection///////
         child2=null;
+        family1=null;
+        pet=pet1;
         System.gc();
 
         ///////////DayOfWeek all values///////////
