@@ -17,8 +17,9 @@ public class Main {
 
         Human child2 = new Human("Judy","Stolone",2013,(2020-2013),80);
 
-        Pet pet = new Pet("Dog","Rick",3);
-        Pet pet1 = new Pet("Dog","Rick",3);
+        Pet pet = new Pet(Species.DOG,"Rick",3);
+        Pet pet1 = new Pet(Species.DOG,"Rick",3);
+        System.out.println("Our pet is " + pet.getSpecies());
 
         Family family = new Family(mother, father,2);
         Family family1 = new Family(mother, father,2);
@@ -66,9 +67,6 @@ public class Main {
                 System.out.println("Today is Sunday");
                 break;
         }
-
-         Species species = Species.DOG;
-        System.out.println("Our pet is " + species);
 
         //////Before delete children//////
 
