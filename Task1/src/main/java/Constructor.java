@@ -1,4 +1,4 @@
-package Sentence;
+package Homework8;
 
 public class Constructor {
  final String verb;

@@ -1,4 +1,4 @@
-package Sentence;
+package Homework8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
