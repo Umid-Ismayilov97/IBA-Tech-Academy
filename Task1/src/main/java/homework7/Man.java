@@ -6,7 +6,6 @@ public final class Man extends Human{
         super(name, surname);
     }
 
-
     public void repairCar(){
 
         System.out.println(getName()+ " can fix this car!");
