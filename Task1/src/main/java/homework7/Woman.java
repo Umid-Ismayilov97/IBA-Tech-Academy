@@ -1,6 +1,6 @@
 package homework7;
 
-public class Woman extends Human {
+public final class Woman extends Human {
 
     public Woman(String name, String surname) {
         super(name, surname);
