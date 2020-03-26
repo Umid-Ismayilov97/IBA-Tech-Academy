@@ -10,7 +10,7 @@ public class Main {
 
         Map<String, String> schedule = new HashMap<>();
 
-        schedule.put(DayOfWeek.SUNDAY.name()," Go to work");
+        schedule.put(DayOfWeek.SUNDAY.name()," Just rest");
 
         schedule.put(DayOfWeek.MONDAY.name()," Go to work");
 
