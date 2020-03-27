@@ -22,6 +22,8 @@ public class Human {
     private Map<String,String> schedule;
 
 
+    public Human() {
+    }
 
     public Human(String name, String surname) {
 
@@ -33,7 +35,13 @@ public class Human {
 
     }
 
-    public Human(){}
+    public Human(String name, String surname, int year, int age, int iq) {
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
+        this.age = age;
+        this.iq = iq;
+    }
 
     public Human(String name, String surname, int year, int age, int iq, Map<String,String> schedule) {
 
@@ -150,7 +158,7 @@ public class Human {
 
     public String toString() {
 
-        return String.format("Human{name='%s', surname='%s', year=%d, age=%d, iq=%d, schedule=%s}", name, surname, year, age, iq, schedule);
+        return String.format("Human{name='%s', surname='%s', year=%d, age=%d, iq=%d}", name, surname, year, age, iq);
 
     }
 
