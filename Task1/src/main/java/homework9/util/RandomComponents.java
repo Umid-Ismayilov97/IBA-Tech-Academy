@@ -1,9 +1,12 @@
 package homework9.util;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import homework9.entity.Family;
+import homework9.entity.Human;
+import homework9.entity.Man;
+import homework9.entity.Woman;
+import homework9.entity.pets.*;
+
+import java.util.*;
 
 public class RandomComponents {
 
@@ -49,8 +52,6 @@ public class RandomComponents {
 
         Map<String,String> schedule = Collections.emptyMap();
 
-
-
         return new Man(name,surname,year,age,iq,schedule);
 
     }
@@ -68,8 +69,6 @@ public class RandomComponents {
         int iq = 10 + (int)(Math.random() * 91);
 
         Map<String,String> schedule = Collections.emptyMap();
-
-
 
         return new Woman(name,surname,year,age,iq,schedule);
 

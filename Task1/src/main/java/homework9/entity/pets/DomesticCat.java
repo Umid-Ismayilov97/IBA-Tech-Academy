@@ -3,8 +3,8 @@ package homework9.entity.pets;
 import java.util.Set;
 
 public class DomesticCat extends Pet {
-    public DomesticCat(String nickname, Species species, int age, Set<String> habits) {
-        super(nickname, species, age, habits);
+    public DomesticCat(String nickname) {
+        super(nickname);
     }
 
     @Override

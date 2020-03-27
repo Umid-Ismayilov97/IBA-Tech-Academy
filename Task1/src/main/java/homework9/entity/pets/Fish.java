@@ -5,8 +5,8 @@ import java.util.Set;
 
 public class Fish extends Pet {
 
-    public Fish(String nickname, Species species, int age, Set<String> habits) {
-        super(nickname, species, age, habits);
+    public Fish(String nickname) {
+        super(nickname);
     }
 
 
