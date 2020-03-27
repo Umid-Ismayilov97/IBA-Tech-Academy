@@ -7,13 +7,13 @@ import java.util.Map;
 
 public class RandomComponents {
 
-    public static List<String> manNames = Arrays.asList("Adil","Ayxan","Aydin","Rustem","Ferrux","John","Jason");
+    public static List<String> manNames = Arrays.asList("Umid","Ismayil","Amin","Camal","Nasim","Perviz","Tofiq");
 
-    public static List<String> surnames = Arrays.asList("Abdayev","Hasanov","Aydinli","Rustemli","Jackson","Jacob","Statham");
+    public static List<String> surnames = Arrays.asList("Ismayilov","Mirzeliyev","Bagiropv","Abbasov","Agayev","Babayev","Mehdizade");
 
-    public static List<String> womanNames = Arrays.asList("Aytac","Nigar","Natavan","Seide","Susen","Gozel","Nazile");
+    public static List<String> womanNames = Arrays.asList("Aytac","Vefa","LeyLa","Fidan","Nermin","Ayten","Nazile");
 
-    public static List<String> nicknames = Arrays.asList("Yummy","Little","I need Love","Puppy","NigaMeddin","Chuck","Toplan");
+    public static List<String> nicknames = Arrays.asList("Ayka","Puffy","I need Love","Pump","Chucky","Duck","Nazi");
 
 
 
