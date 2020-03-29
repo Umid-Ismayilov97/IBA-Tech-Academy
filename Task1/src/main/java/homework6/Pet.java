@@ -1,5 +1,6 @@
 package homework6;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Pet {
@@ -27,6 +28,13 @@ public class Pet {
         this.species = species;
         this.nickname = nickname;
         this.age = age;
+    }
+
+    public Pet(Species species, String nickname, int age, String[] habits) {
+        this.species = species;
+        this.nickname = nickname;
+        this.age = age;
+        this.habits = habits;
     }
 
     public void eat() {
@@ -136,13 +144,7 @@ public class Pet {
 
     }
     @Override
-
     public String toString() {
-
-        return String.format("%s{nickname='%s', age=%d}",
-
-                species, nickname, age);
-
+        return String.format("%s{nickname='%s', age=%d, habits=%s}", species, nickname, age, Arrays.toString(habits));
     }
-
 }
