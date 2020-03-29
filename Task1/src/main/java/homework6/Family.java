@@ -25,6 +25,8 @@ public class Family {
 
     }
 
+    public Family(Human mother, Human father) {
+    }
     public Family(Human mother,Human father,int countOfChild) {
         this.mother = mother;
         this.father = father;
